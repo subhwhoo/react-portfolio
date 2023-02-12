@@ -6,7 +6,11 @@ import {
   AiFillLinkedin,
   AiFillBehanceCircle,
 } from "react-icons/ai";
-import 
+import Image from "next/image";
+import deved from "../public/dev-ed-wave.png";
+import design from "../public/design.png";
+import code from "../public/code.png";
+import consulting from "../public/consulting.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,7 +57,45 @@ export default function Home() {
             <AiFillLinkedin />
             <AiFillBehanceCircle />
           </div>
-          <div className={""}></div>
+          <div
+            className={
+              "relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden"
+            }
+          >
+            <Image src={deved} layout={"fill"} objectFit={"cover"} />
+          </div>
+        </section>
+        <section>
+          <div>
+            <h3 className={"text-3xl py-1"}>Services i offer</h3>
+            <p className={"text-md py-2 leading-8 text-gray-800 "}>
+              Since the beginning of my journey as a freelance developer and I
+              have done remote work for
+              <span className="text-teal-500"> agencies </span> consulted for
+              <span className="text-teal-500"> Startups </span> , and
+              collaborated with talented people to create for both business and
+              consumer use.
+            </p>
+            <p className={"text-md py-2 leading-8 text-gray-800 "}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+              beatae eligend.
+            </p>
+          </div>
+          <div>
+            <div>
+              <Image src={design} width={100} height={100} />
+              <h3 className={"text-lg font-medium pt-8 pb-2"}>
+                Beautiful Designs
+              </h3>
+              <p className={"py-2"}>
+                Creating elegant designs suited for your needs design theory.
+              </p>
+              <h4 className={"py-4 text-teal-600"}>Design tools i use</h4>
+              <p className={"text-gray-800 py-1 "}>Figma</p>
+              <p className={"text-gray-800 py-1 "}>Photoshop</p>
+              <p className={"text-gray-800 py-1 "}>Illustrator</p>
+            </div>
+          </div>
         </section>
       </main>
     </div>
